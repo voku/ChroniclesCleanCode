@@ -164,9 +164,11 @@ export const BookPage: React.FC<BookPageProps> = ({ chapter, onInteract, isCover
                  viewport={{ once: true }}
                  className="my-6"
                >
-                 <button
+                 <button type="button"
                    onClick={(e) => {
+                     e.preventDefault();
                      e.stopPropagation();
+                     e.nativeEvent.stopImmediatePropagation();
                      if (segment.interactionId) onInteract(segment.interactionId);
                    }}
                    className="w-full group relative overflow-hidden bg-slate-900 rounded-xl p-1 shadow-xl hover:shadow-2xl hover:shadow-emerald-900/20 transition-all duration-300 text-left"

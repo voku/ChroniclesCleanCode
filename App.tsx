@@ -358,7 +358,7 @@ const App: React.FC = () => {
                     useMouseEvents={true}
                     swipeDistance={30}
                     showPageCorners={true}
-                    disableFlipByClick={false}
+                    disableFlipByClick={true}
                 >
                 {allPages}
                 </HTMLFlipBook>
