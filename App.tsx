@@ -5,7 +5,7 @@ import { Overlay } from './components/Overlay';
 import { TableOfContents } from './components/TableOfContents';
 import { chapters, interactions } from './data';
 import { Interaction } from './types';
-import { ChevronLeft, ChevronRight, List, RotateCcw } from 'lucide-react';
+import { ChevronLeft, ChevronRight, List, RotateCcw, ExternalLink, Github } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // Page wrapper for HTMLFlipBook
@@ -255,6 +255,24 @@ const App: React.FC = () => {
 
       {/* Top Bar Controls */}
       <div className="fixed top-4 right-4 z-40 flex gap-2">
+         <a
+           href="https://dev.to/suckup_de/how-to-write-readable-code-2a0k"
+           target="_blank"
+           rel="noopener noreferrer"
+           className="bg-white/90 backdrop-blur text-slate-800 p-3 rounded-full shadow-lg hover:bg-emerald-50 transition-all hover:scale-105 active:scale-95 border border-slate-200 group"
+           title="Read Original Blog Post"
+         >
+           <ExternalLink size={20} className="group-hover:text-emerald-600 transition-colors" />
+         </a>
+         <a
+           href="https://github.com/voku/ChroniclesCleanCode"
+           target="_blank"
+           rel="noopener noreferrer"
+           className="bg-white/90 backdrop-blur text-slate-800 p-3 rounded-full shadow-lg hover:bg-emerald-50 transition-all hover:scale-105 active:scale-95 border border-slate-200 group"
+           title="Contribute on GitHub"
+         >
+           <Github size={20} className="group-hover:text-emerald-600 transition-colors" />
+         </a>
          <button 
            onClick={() => setIsTocOpen(true)}
            className="bg-white/90 backdrop-blur text-slate-800 p-3 rounded-full shadow-lg hover:bg-emerald-50 transition-all hover:scale-105 active:scale-95 border border-slate-200 group"
